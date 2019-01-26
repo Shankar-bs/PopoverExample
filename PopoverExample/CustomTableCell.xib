@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Yy5-d1-GaK" customClass="CustomTableCell" customModule="PopovertsFromTableCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yy5-d1-GaK" id="Ean-zt-1TT">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP6-WM-K7u">
+                        <rect key="frame" x="325" y="0.0" width="50" height="50.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="5uH-Na-Xdx"/>
+                            <constraint firstAttribute="width" constant="50" id="gY4-p9-j38"/>
+                        </constraints>
+                        <state key="normal" title="Show"/>
+                        <connections>
+                            <action selector="showButtonAction:" destination="Yy5-d1-GaK" eventType="touchUpInside" id="q2T-0d-Q2F"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X35-j9-upd">
+                        <rect key="frame" x="16" y="15" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="NbU-4U-8Hg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qP6-WM-K7u" secondAttribute="bottom" id="713-Bg-EVH"/>
+                    <constraint firstItem="qP6-WM-K7u" firstAttribute="top" secondItem="Ean-zt-1TT" secondAttribute="top" id="BLB-Dc-Jal"/>
+                    <constraint firstItem="X35-j9-upd" firstAttribute="centerY" secondItem="Ean-zt-1TT" secondAttribute="centerY" id="UKm-hy-ucw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="X35-j9-upd" secondAttribute="bottom" constant="4" id="jeZ-Nm-neE"/>
+                    <constraint firstItem="X35-j9-upd" firstAttribute="leading" secondItem="Ean-zt-1TT" secondAttribute="leadingMargin" id="pRV-Zd-vk0"/>
+                    <constraint firstAttribute="trailing" secondItem="qP6-WM-K7u" secondAttribute="trailing" id="yEn-9H-sbc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellLabel" destination="X35-j9-upd" id="fhv-ZS-ELS"/>
+                <outlet property="showButton" destination="qP6-WM-K7u" id="mWz-51-7Aa"/>
+            </connections>
+            <point key="canvasLocation" x="320.80000000000001" y="-116.04197901049476"/>
+        </tableViewCell>
+    </objects>
+</document>
