@@ -101,7 +101,9 @@ class ViewController: UIViewController ,UIPopoverPresentationControllerDelegate 
 extension ViewController:PopoverContentControllerDelegate {
     func popoverContent(controller: PopoverContentController, didselectItem name: String) {
         /* Comment below line */
-        //showButton.setTitle(name, for: .normal)
+        //To update the button title
+        showButton.setTitle(name, for: .normal)
+        /* */
         if let indexPath = controller.updateIndex {
             self.datasourceArray[indexPath.row] = name
             self.myTableview.reloadRows(at: [indexPath], with: .fade)
